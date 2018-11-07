@@ -1,0 +1,14 @@
+$black: #000;
+$white: #fff;
+$orange: #ffa500;
+$live: #8CE241;
+
+$light-gray: #606060;
+$gray: #404040;
+$dark-gray: #202020;
+
+@mixin breakpoint($screen) {
+  @if $screen == desk {
+    @media (min-width: 750px) { @content; }
+  }
+}

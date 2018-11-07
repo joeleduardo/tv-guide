@@ -1,0 +1,166 @@
+@import '../variables';
+
+.show {
+  position: relative;
+  background-color: $black;
+  color: $white;
+
+  section {
+    padding: 1rem;
+
+    @include breakpoint(desk) {
+      margin-top: 1rem;
+      padding: 1rem;
+    }
+  }
+
+  h1 {
+    margin-bottom: .5rem;
+
+    @include breakpoint(desk) {
+      font-size: 1.5rem;
+    }
+  }
+
+  h2 {
+    text-transform: uppercase;
+    font-size: .7rem;
+  }
+
+  p {
+    font-size: .8rem;
+    line-height: 1.6;
+
+    @include breakpoint(desk) {
+      font-size: 1rem;
+    }
+  }
+
+  li:first-of-type {
+    display: block;
+
+    @include breakpoint(desk) {
+      display: inline-block;
+      font-size: 1rem;
+    }
+  }
+
+  li {
+    display: inline-block;
+    margin-right: .5rem;
+    font-size: .8rem;
+
+    @include breakpoint(desk) {
+      font-size: .9rem;
+    }
+  }
+}
+
+.image {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  padding-top: 80px;
+  height: 250px;
+  opacity: .6;
+
+  @include breakpoint(desk) {
+    padding-top: 160px;
+    height: 450px;
+  }
+}
+
+.playIco {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: $white;
+  background-image: url('../assets/play-button.svg');
+  background-size: 50%;
+  background-position: 60%;
+  background-repeat: no-repeat;
+  margin: auto;
+}
+
+.liveLabel {
+  position: absolute;
+  display: flex;
+  background-color: $black;
+  color: $white;
+  padding: .5rem;
+  top: 1rem;
+  right: 0;
+  z-index: 1;
+}
+
+.futureLabel, .pastLabel {
+  position: absolute;
+  display: flex;
+  background-color: $black;
+  color: $white;
+  padding: .5rem;
+  top: 1rem;
+  right: 0;
+  z-index: 1;
+}
+
+.futureLabelIco {
+  width: 18px;
+  height: 18px;
+  background-image: url('../assets/clock-circular-outline.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-right: .5rem;
+}
+
+.liveLabelIco {
+  border-radius: 50%;
+  background-color: $live;
+  width: 18px;
+  height: 18px;
+  margin-right: .5rem;
+}
+
+.channelInfo {
+  display: flex;
+  margin-bottom: 1rem;
+}
+
+.channelIco {
+  width: 80px;
+  height: 80px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  background-color: $light-gray;
+  margin-right: 1rem;
+}
+
+.channelAggregation {
+  color: $light-gray;
+  margin-bottom: 1rem;
+
+  @include breakpoint(desk) {
+    margin-bottom: .5rem;
+  }
+}
+
+.back {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  background-image: url('../assets/left-arrow.svg');
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: 2;
+  top: 1rem;
+  left: 1rem;
+  cursor: pointer;
+
+  @include breakpoint(desk) {
+    width: 40px;
+    height: 40px;
+  }
+}

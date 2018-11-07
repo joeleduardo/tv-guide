@@ -1,0 +1,122 @@
+@import '../variables';
+
+.schedule {
+  position: relative;
+
+  aside {
+    position: absolute;
+    z-index: 2;
+  }
+
+  aside li {
+    padding: 1rem;
+    background-color: $dark-gray;
+    border-bottom: 1px solid $gray;
+    box-shadow: 0 2px 4px 0 black;
+    background-size: 70%;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 60px;
+  }
+
+  aside li:first-of-type {
+    text-transform: uppercase;
+    color: $white;
+    padding: .5rem;
+    height: auto;
+    text-align: center;
+    font-size: .8rem;
+  }
+
+  section {
+    background-color: $gray;
+    overflow-y: hidden;
+    white-space: nowrap;
+    box-shadow: 0 2px 4px 0 $black;
+    scroll-behavior: smooth;
+  }
+
+  section ul {
+    margin-left: 60px;
+  }
+
+  section li {
+    display: inline-block;
+    font-size: .8rem;
+    color: $white;
+    padding: .5rem;
+    border-right: 1px solid $gray;
+    border-bottom: 1px solid $gray;
+    background-color: $black;
+    box-shadow: 0 2px 4px 0 $black;
+  }
+
+  section li a {
+    display: block;
+    color: inherit;
+    text-decoration: none;
+  }
+
+  section li div, section li span {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  section li span {
+    display: block;
+    color: $light-gray;
+    font-size: .7rem;
+  }
+
+  button {
+    color: $white;
+    font-size: .8rem;
+    text-transform: uppercase;
+    background-color: $orange;
+    border: none;
+    border-radius: 8px;
+    padding: .5rem;
+    outline: none;
+    margin-right: 1rem;
+    cursor: pointer;
+  }
+}
+
+.date {
+  color: $white;
+  padding: .5rem;
+  background-color: $dark-gray;
+  border-bottom: 1px solid $gray;
+  box-shadow: 0 2px 4px 0 $black;
+}
+
+.shows {
+  position: relative;
+}
+
+.hours {
+  padding: .5rem;
+  background-color: $dark-gray;
+  border-right: 1px solid $light-gray;
+  text-align: center;
+}
+
+.hours:last-of-type {
+  border-right: none;
+}
+
+.marker {
+  position: absolute;
+  background-color: $orange;
+  height: 100%;
+  width: 1px;
+  z-index: 1;
+}
+
+.markerHeader {
+  width: 3px;
+  height: 30px;
+  background-color: $orange;
+  margin-left: -1px;
+}
