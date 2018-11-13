@@ -1,6 +1,9 @@
 const webpack = require('webpack');
 const merge = require('webpack-merge');
 const common = require('./webpack.common.js');
+const Dotenv = require('dotenv');
+
+const env = Dotenv.config().parsed;
 
 module.exports = merge(common, {
   mode: 'development',
@@ -12,7 +15,8 @@ module.exports = merge(common, {
   },
   plugins: [
     new webpack.DefinePlugin({
-      "API_URL": JSON.stringify("http://localhost:1337")
+      'API_URL': JSON.stringify(env.API_URL),
+      'PUBLIC_URL': JSON.stringify('/')
     }),
   ]
 });

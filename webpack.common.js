@@ -10,7 +10,7 @@ module.exports = {
     App: './src/index.js'
   },
   output: {
-    filename: 'js/[name].js',
+    filename: 'js/[name].[contenthash].js',
     path: path.resolve(__dirname, 'dist'),
     publicPath: '/'
   },
@@ -21,7 +21,9 @@ module.exports = {
         parallel: true,
         sourceMap: true
       }),
-      new OptimizeCssAssetsPlugin({})]
+      new OptimizeCssAssetsPlugin({
+      })
+    ]
   },
   plugins: [
     new CleanWebpackPlugin(['dist']),
@@ -34,15 +36,7 @@ module.exports = {
       }
     }),
     new MiniCssExtractPlugin({
-      filename: "css/[name].css"
-    }),
-    new OptimizeCssAssetsPlugin({
-      assetNameRegExp: /\.optimize\.css$/g,
-      cssProcessor: require('cssnano'),
-      cssProcessorPluginOptions: {
-        preset: ['default', { discardComments: { removeAll: true } }]
-      },
-      canPrint: true
+      filename: "css/[name].[contenthash].css"
     })
   ],
   module: {
@@ -60,7 +54,7 @@ module.exports = {
       },
       {
         test: /\.(css|scss)$/,
-        use: [MiniCssExtractPlugin.loader, 'css-loader?modules=true&-minimize!postcss-loader', 'sass-loader']
+        use: [MiniCssExtractPlugin.loader, 'css-loader?modules=true!postcss-loader!sass-loader']
       },
       {
         test: /\.(png|svg|jpg|gif)$/,
