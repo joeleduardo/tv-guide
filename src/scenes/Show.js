@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import styles from './Show.scss';
 
 class Show extends React.Component {
@@ -78,7 +79,7 @@ class Show extends React.Component {
         <div className={styles.futureLabel}>
           <div className={styles.futureLabelIco} />
           {setFutureLabel(this.state.show.start, this.state.show.end)}
-          </div>
+        </div>
         }
         {this.state.type === 'prev' &&
         <div className={styles.pastLabel}>
@@ -130,5 +131,12 @@ class Show extends React.Component {
     )
   }
 }
+
+Show.propTypes = {
+  getShow: PropTypes.func.isRequired,
+  match: PropTypes.object.isRequired,
+  show: PropTypes.object.isRequired,
+  history: PropTypes.object.isRequired
+};
 
 export default Show;

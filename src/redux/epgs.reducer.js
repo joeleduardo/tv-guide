@@ -5,11 +5,11 @@ const initialState = {
 };
 
 const epgsReducer = (state = initialState, action) => {
-  switch (action.type) {
-    case GET_EPGS:
-      return {...state, epgs: action.epgs}
-    default:
-      return state;
+  switch (action.type){
+  case GET_EPGS:
+    return { ...state, epgs: action.epgs }
+  default:
+    return state;
   }
 };
 

@@ -1,0 +1,22 @@
+{
+  "parser": "babel-eslint",
+  "plugins": [
+    "react"
+  ],
+  "rules": {
+    "indent": ["error", 2]
+  },
+  "globals": {
+    "API_URL": true,
+    "PUBLIC_URL": true
+  },
+  "env": {
+    "browser": true
+  },
+  "settings": {
+    "react": {
+      "version": "default"
+    }
+  },
+  "extends": ["eslint:recommended", "plugin:react/recommended"]
+}

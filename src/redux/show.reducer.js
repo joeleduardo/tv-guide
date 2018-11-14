@@ -6,10 +6,10 @@ const initialState = {
 
 const showReducer = (state = initialState, action) => {
   switch (action.type) {
-    case GET_SHOW:
-      return {...state, show: action.show}
-    default:
-      return state;
+  case GET_SHOW:
+    return {...state, show: action.show}
+  default:
+    return state;
   }
 };
 

@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { Switch, Route } from 'react-router-dom';
 import Loadable from 'react-loadable';
 
@@ -17,6 +18,10 @@ const ShowPage = Loadable({
   loading: Loading,
   modules: ['Show']
 });
+
+Loading.propTypes = {
+  error: PropTypes.object.isRequired
+};
 
 const Routes = () => (
   <Switch>

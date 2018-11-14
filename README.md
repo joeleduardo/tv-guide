@@ -6,7 +6,7 @@ Download the project first, then install dependencies by `npm`
 npm install
 ```
 
-Before run the project you need set up a ENVIRONMENT VARIABLE for `Mock API`
+Before run the project you need set up a ENVIRONMENT VARIABLE in your `.env` file for get `Mock API`
 
 ```
 API_URL=http://localhost:1337
